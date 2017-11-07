@@ -6,8 +6,7 @@
 //  Copyright © 2017年 hellochenms. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "Cell.h"
 
-@interface CompositeCell : Cell
+@interface TitleAndTitleImageCell : Cell
 @end

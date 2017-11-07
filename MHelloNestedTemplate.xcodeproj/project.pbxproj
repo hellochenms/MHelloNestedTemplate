@@ -25,19 +25,19 @@
 		99892BBC1FB00BB10075E93A /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 99892BB81FB00BB10075E93A /* Node.m */; };
 		99892BC41FB00C330075E93A /* TitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99892BC31FB00C330075E93A /* TitleCell.m */; };
 		99892BC71FB00C420075E93A /* TitleImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99892BC61FB00C420075E93A /* TitleImageCell.m */; };
-		99892BCA1FB00CC50075E93A /* CompositeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99892BC91FB00CC50075E93A /* CompositeCell.m */; };
+		99892BCA1FB00CC50075E93A /* TitleAndTitleImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99892BC91FB00CC50075E93A /* TitleAndTitleImageCell.m */; };
 		99892BD01FB00D2E0075E93A /* TempDataGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 99892BCF1FB00D2E0075E93A /* TempDataGenerator.m */; };
 		99892BD31FB0143C0075E93A /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99892BD21FB0143C0075E93A /* Cell.m */; };
 		99892BD61FB016270075E93A /* TitleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 99892BD51FB016270075E93A /* TitleLayout.m */; };
 		99892BD91FB016360075E93A /* TitleImageLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 99892BD81FB016360075E93A /* TitleImageLayout.m */; };
-		99892BDC1FB016440075E93A /* CompositeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 99892BDB1FB016440075E93A /* CompositeLayout.m */; };
 		99997A4E1FB03731003C8BBA /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 99997A4D1FB03731003C8BBA /* News.m */; };
 		99997A511FB03DC7003C8BBA /* LayoutMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 99997A501FB03DC7003C8BBA /* LayoutMapping.m */; };
 		99997A561FB04B7D003C8BBA /* TitleNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 99997A551FB04B7D003C8BBA /* TitleNode.m */; };
 		99997A591FB04B8D003C8BBA /* TitleImageNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 99997A581FB04B8D003C8BBA /* TitleImageNode.m */; };
-		99997A5C1FB04BA5003C8BBA /* CompositeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 99997A5B1FB04BA5003C8BBA /* CompositeNode.m */; };
 		99997A611FB06133003C8BBA /* NSString+M2Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 99997A601FB06133003C8BBA /* NSString+M2Size.m */; };
 		99997A671FB06452003C8BBA /* News+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 99997A661FB06452003C8BBA /* News+Layout.m */; };
+		99DB97F71FB1A078001C4C8F /* CompositeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DB97F31FB1A078001C4C8F /* CompositeLayout.m */; };
+		99DB97F81FB1A078001C4C8F /* CompositeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DB97F41FB1A078001C4C8F /* CompositeNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,8 +94,8 @@
 		99892BC31FB00C330075E93A /* TitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleCell.m; sourceTree = "<group>"; };
 		99892BC51FB00C420075E93A /* TitleImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleImageCell.h; sourceTree = "<group>"; };
 		99892BC61FB00C420075E93A /* TitleImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleImageCell.m; sourceTree = "<group>"; };
-		99892BC81FB00CC50075E93A /* CompositeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompositeCell.h; sourceTree = "<group>"; };
-		99892BC91FB00CC50075E93A /* CompositeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompositeCell.m; sourceTree = "<group>"; };
+		99892BC81FB00CC50075E93A /* TitleAndTitleImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleAndTitleImageCell.h; sourceTree = "<group>"; };
+		99892BC91FB00CC50075E93A /* TitleAndTitleImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleAndTitleImageCell.m; sourceTree = "<group>"; };
 		99892BCE1FB00D2E0075E93A /* TempDataGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TempDataGenerator.h; sourceTree = "<group>"; };
 		99892BCF1FB00D2E0075E93A /* TempDataGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempDataGenerator.m; sourceTree = "<group>"; };
 		99892BD11FB0143C0075E93A /* Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
@@ -104,8 +104,6 @@
 		99892BD51FB016270075E93A /* TitleLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleLayout.m; sourceTree = "<group>"; };
 		99892BD71FB016360075E93A /* TitleImageLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleImageLayout.h; sourceTree = "<group>"; };
 		99892BD81FB016360075E93A /* TitleImageLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleImageLayout.m; sourceTree = "<group>"; };
-		99892BDA1FB016440075E93A /* CompositeLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompositeLayout.h; sourceTree = "<group>"; };
-		99892BDB1FB016440075E93A /* CompositeLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompositeLayout.m; sourceTree = "<group>"; };
 		99997A4C1FB03731003C8BBA /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		99997A4D1FB03731003C8BBA /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		99997A4F1FB03DC7003C8BBA /* LayoutMapping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LayoutMapping.h; sourceTree = "<group>"; };
@@ -114,12 +112,14 @@
 		99997A551FB04B7D003C8BBA /* TitleNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleNode.m; sourceTree = "<group>"; };
 		99997A571FB04B8D003C8BBA /* TitleImageNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleImageNode.h; sourceTree = "<group>"; };
 		99997A581FB04B8D003C8BBA /* TitleImageNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleImageNode.m; sourceTree = "<group>"; };
-		99997A5A1FB04BA5003C8BBA /* CompositeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompositeNode.h; sourceTree = "<group>"; };
-		99997A5B1FB04BA5003C8BBA /* CompositeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompositeNode.m; sourceTree = "<group>"; };
 		99997A5F1FB06133003C8BBA /* NSString+M2Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+M2Size.h"; sourceTree = "<group>"; };
 		99997A601FB06133003C8BBA /* NSString+M2Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+M2Size.m"; sourceTree = "<group>"; };
 		99997A651FB06452003C8BBA /* News+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "News+Layout.h"; sourceTree = "<group>"; };
 		99997A661FB06452003C8BBA /* News+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "News+Layout.m"; sourceTree = "<group>"; };
+		99DB97F31FB1A078001C4C8F /* CompositeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompositeLayout.m; sourceTree = "<group>"; };
+		99DB97F41FB1A078001C4C8F /* CompositeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompositeNode.m; sourceTree = "<group>"; };
+		99DB97F51FB1A078001C4C8F /* CompositeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompositeLayout.h; sourceTree = "<group>"; };
+		99DB97F61FB1A078001C4C8F /* CompositeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompositeNode.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +259,10 @@
 				99892BB81FB00BB10075E93A /* Node.m */,
 				99892BB71FB00BB10075E93A /* Layout.h */,
 				99892BB51FB00BB10075E93A /* Layout.m */,
+				99DB97F61FB1A078001C4C8F /* CompositeNode.h */,
+				99DB97F41FB1A078001C4C8F /* CompositeNode.m */,
+				99DB97F51FB1A078001C4C8F /* CompositeLayout.h */,
+				99DB97F31FB1A078001C4C8F /* CompositeLayout.m */,
 				99997A4F1FB03DC7003C8BBA /* LayoutMapping.h */,
 				99997A501FB03DC7003C8BBA /* LayoutMapping.m */,
 			);
@@ -294,20 +298,16 @@
 		99892BC11FB00C1C0075E93A /* Title+TitleImage */ = {
 			isa = PBXGroup;
 			children = (
-				99892BC81FB00CC50075E93A /* CompositeCell.h */,
-				99892BC91FB00CC50075E93A /* CompositeCell.m */,
-				99997A5A1FB04BA5003C8BBA /* CompositeNode.h */,
-				99997A5B1FB04BA5003C8BBA /* CompositeNode.m */,
-				99892BDA1FB016440075E93A /* CompositeLayout.h */,
-				99892BDB1FB016440075E93A /* CompositeLayout.m */,
-				996B9F041FB1655B00B3ECCE /* HeaderFooterCompositeNode.h */,
-				996B9F051FB1655B00B3ECCE /* HeaderFooterCompositeNode.m */,
-				996B9F071FB1671900B3ECCE /* HeaderFooterCompositeLayout.h */,
-				996B9F081FB1671900B3ECCE /* HeaderFooterCompositeLayout.m */,
+				99892BC81FB00CC50075E93A /* TitleAndTitleImageCell.h */,
+				99892BC91FB00CC50075E93A /* TitleAndTitleImageCell.m */,
 				996B9F0D1FB18AC000B3ECCE /* HeaderCompositeNode.h */,
 				996B9F0E1FB18AC000B3ECCE /* HeaderCompositeNode.m */,
 				996B9F0A1FB18AAC00B3ECCE /* HeaderCompositeLayout.h */,
 				996B9F0B1FB18AAC00B3ECCE /* HeaderCompositeLayout.m */,
+				996B9F041FB1655B00B3ECCE /* HeaderFooterCompositeNode.h */,
+				996B9F051FB1655B00B3ECCE /* HeaderFooterCompositeNode.m */,
+				996B9F071FB1671900B3ECCE /* HeaderFooterCompositeLayout.h */,
+				996B9F081FB1671900B3ECCE /* HeaderFooterCompositeLayout.m */,
 			);
 			path = "Title+TitleImage";
 			sourceTree = "<group>";
@@ -472,19 +472,19 @@
 				99997A611FB06133003C8BBA /* NSString+M2Size.m in Sources */,
 				99997A511FB03DC7003C8BBA /* LayoutMapping.m in Sources */,
 				99892BC71FB00C420075E93A /* TitleImageCell.m in Sources */,
-				99997A5C1FB04BA5003C8BBA /* CompositeNode.m in Sources */,
 				99892BBC1FB00BB10075E93A /* Node.m in Sources */,
 				99997A671FB06452003C8BBA /* News+Layout.m in Sources */,
 				996B9F061FB1655B00B3ECCE /* HeaderFooterCompositeNode.m in Sources */,
 				99892BD61FB016270075E93A /* TitleLayout.m in Sources */,
+				99DB97F71FB1A078001C4C8F /* CompositeLayout.m in Sources */,
 				99892BD91FB016360075E93A /* TitleImageLayout.m in Sources */,
 				99892BBA1FB00BB10075E93A /* V2ViewController.m in Sources */,
 				99892BBB1FB00BB10075E93A /* Layout.m in Sources */,
-				99892BCA1FB00CC50075E93A /* CompositeCell.m in Sources */,
+				99892BCA1FB00CC50075E93A /* TitleAndTitleImageCell.m in Sources */,
+				99DB97F81FB1A078001C4C8F /* CompositeNode.m in Sources */,
 				996B9F091FB1671900B3ECCE /* HeaderFooterCompositeLayout.m in Sources */,
 				99892B6D1FB00A6E0075E93A /* AppDelegate.m in Sources */,
 				99892BD01FB00D2E0075E93A /* TempDataGenerator.m in Sources */,
-				99892BDC1FB016440075E93A /* CompositeLayout.m in Sources */,
 				99997A4E1FB03731003C8BBA /* News.m in Sources */,
 				99997A561FB04B7D003C8BBA /* TitleNode.m in Sources */,
 				99892BB91FB00BB10075E93A /* V1ViewController.m in Sources */,

@@ -32,12 +32,7 @@
 - (void)configWithNews:(News *)news {
     self.news = news;
     [[self class] tryCalcForNews:news];
-    [self primitiveAddSubNodesForNews:news];
     [self primitiveConfigWithNews:news];
-}
-
-- (void)primitiveAddSubNodesForNews:(News *)news {
-    
 }
 
 - (void)primitiveConfigWithNews:(News *)news {

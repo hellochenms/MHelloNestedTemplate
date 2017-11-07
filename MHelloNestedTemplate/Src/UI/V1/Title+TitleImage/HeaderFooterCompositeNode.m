@@ -26,6 +26,10 @@
     self.footerButton.frame = layout.footerButtonFrame;
 }
 
+- (void)primitiveConfigFooterWithNews:(News *)news {
+    [self.footerButton setTitle:[NSString stringWithFormat:@"%@:footer-button", news.title] forState:UIControlStateNormal];
+}
+
 + (Layout *)primitiveGenerateLayout {
     return [HeaderFooterCompositeLayout new];
 }
@@ -44,7 +48,6 @@
     if(!_footerButton){
         _footerButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _footerButton.backgroundColor = [UIColor brownColor];
-        [_footerButton setTitle:@"footer-点击查看更多" forState:UIControlStateNormal];
     }
     return _footerButton;
 }

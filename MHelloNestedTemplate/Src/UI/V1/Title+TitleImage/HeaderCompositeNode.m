@@ -27,6 +27,10 @@
     self.headerTitleLabel.frame = layout.headerTitleFrame;
 }
 
+- (void)primitiveConfigHeaderWithNews:(News *)news {
+    self.headerTitleLabel.text = [NSString stringWithFormat:@"%@:header-label", news.title];
+}
+
 + (Layout *)primitiveGenerateLayout {
     return [HeaderCompositeLayout new];
 }
@@ -47,10 +51,8 @@
         _headerTitleLabel.backgroundColor = [UIColor brownColor];
         _headerTitleLabel.textColor = [UIColor whiteColor];
         _headerTitleLabel.textAlignment = NSTextAlignmentCenter;
-        _headerTitleLabel.text = @"header";
     }
     return _headerTitleLabel;
 }
-
 
 @end

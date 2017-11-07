@@ -18,6 +18,8 @@
             news.imageURLString = @"https://www.baidu.com/img/bd_logo1.png";
         }
         if (i % 5 == 0) {
+            news.title = [NSString stringWithFormat:@"GroupTitlte:%ld", i];
+            
             NSMutableArray<News *> *subNewses = [NSMutableArray<News *> array];
             
             News *subNews = [News new];

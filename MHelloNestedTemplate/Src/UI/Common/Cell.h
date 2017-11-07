@@ -15,7 +15,6 @@
 @property (nonatomic) __kindof Node *node;
 + (double)heightForNews:(News *)news;
 - (void)configWithNews:(News *)news;
-//
-//+ (Layout *)primitiveGenerateLayout;
-//- (void)primitiveConfigWithNews:(News *)news;
+
+- (Class)primitiveNodeClass;
 @end

@@ -14,10 +14,16 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-//        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.node = [[self primitiveNodeClass] new];
+        [self.contentView addSubview:self.node];
     }
     
     return self;
+}
+
+
+- (Class)primitiveNodeClass {
+    return [Node class];
 }
 
 - (void)layoutSubviews {
@@ -26,12 +32,14 @@
     self.node.frame = self.contentView.bounds;
 }
 
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+    [self.node setHighlighted:highlighted animated:animated];
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {}
 
 #pragma mark - Public
 + (double)heightForNews:(News *)news {
-    Class nodeClass = [LayoutMapping nodeClassForNews:news];
-    double height = [nodeClass heightForNews:news];
+    double height = [Node heightForNews:news];
     
     return height;
 }

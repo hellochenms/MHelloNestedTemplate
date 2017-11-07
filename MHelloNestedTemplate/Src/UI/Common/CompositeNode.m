@@ -38,7 +38,7 @@
     return [CompositeLayout new];
 }
 
-- (void)primitiveAddSubNodesForNews:(News *)news {
+- (void)updateSubViewsForNews:(News *)news {
     [self.subNodes enumerateObjectsUsingBlock:^(Node * _Nonnull node, NSUInteger idx, BOOL * _Nonnull stop) {
         [node removeFromSuperview];
     }];
@@ -88,11 +88,17 @@
 //}
 
 - (void)primitiveConfigWithNews:(News *)news {
+    [self updateSubViewsForNews:news];
+    [self primitiveConfigHeaderWithNews:news];
     [self.subNodes enumerateObjectsUsingBlock:^(Node * _Nonnull node, NSUInteger idx, BOOL * _Nonnull stop) {
         News *subNews = [news.subNewses objectAtIndex:idx];
         [node configWithNews:subNews];
     }];
+    [self primitiveConfigFooterWithNews:news];
 }
+
+- (void)primitiveConfigHeaderWithNews:(News *)news {}
+- (void)primitiveConfigFooterWithNews:(News *)news {}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];

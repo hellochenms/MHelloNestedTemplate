@@ -10,8 +10,6 @@
 #import "TitleImageLayout.h"
 
 @implementation TitleImageNode
-
-
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {

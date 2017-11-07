@@ -12,7 +12,7 @@
 #import "Cell.h"
 #import "TitleCell.h"
 #import "TitleImageCell.h"
-#import "CompositeCell.h"
+#import "TitleAndTitleImageCell.h"
 
 @interface V1ViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic) NSArray<News *> *newses;
@@ -65,7 +65,7 @@
             return [TitleImageCell class];
             break;
         case NLayoutTypeComposite:
-            return [CompositeCell class];
+            return [TitleAndTitleImageCell class];
             break;
         default:
             return [TitleCell class];

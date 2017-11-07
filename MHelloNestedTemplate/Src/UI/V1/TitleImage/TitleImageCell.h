@@ -6,9 +6,7 @@
 //  Copyright © 2017年 hellochenms. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "Cell.h"
-#import "TitleImageNode.h"
 
 @interface TitleImageCell : Cell
 @end

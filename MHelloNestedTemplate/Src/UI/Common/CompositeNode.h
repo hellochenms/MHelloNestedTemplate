@@ -13,6 +13,8 @@
 @property (nonatomic) NSMutableArray<Node *> *subNodes;
 - (void)primitiveAddHeader;
 - (void)primitiveLayoutHeaderForNews:(News *)news;
+- (void)primitiveConfigHeaderWithNews:(News *)news;
 - (void)primitiveAddFooter;
 - (void)primitiveLayoutFooterForNews:(News *)news;
+- (void)primitiveConfigFooterWithNews:(News *)news;
 @end
