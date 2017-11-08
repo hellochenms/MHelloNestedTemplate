@@ -15,4 +15,15 @@
     return [HeaderFooterCompositeNode class];
 }
 
+- (void)primitiveDecorateNode {
+    HeaderFooterCompositeNode *node = self.node;
+    __weak typeof(self) weakSelf = self;
+    node.didSelectedBlock = ^(News *news) {
+        if (weakSelf.delegate
+            && [weakSelf.delegate respondsToSelector:@selector(didSelectCompositeSubNews:)]) {
+            [weakSelf.delegate didSelectCompositeSubNews:news];
+        }
+    };
+}
+
 @end

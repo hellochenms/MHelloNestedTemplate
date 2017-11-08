@@ -13,8 +13,9 @@
 #import "TitleCell.h"
 #import "TitleImageCell.h"
 #import "TitleAndTitleImageCell.h"
+#import "NodeHelper.h"
 
-@interface V1ViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface V1ViewController ()<UITableViewDataSource, UITableViewDelegate, CellProtocol>
 @property (nonatomic) NSArray<News *> *newses;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -39,6 +40,7 @@
     Cell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         cell = [[cellClass alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell.delegate = self;
     }
     
     [cell configWithNews:news];
@@ -71,6 +73,21 @@
             return [TitleCell class];
             break;
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Cell *cell = (Cell *)[tableView cellForRowAtIndexPath:indexPath];
+    if ([NodeHelper isCompositeNode:cell.node]) {
+        return;
+    }
+    
+    News *news = [self.newses objectAtIndex:indexPath.row];
+    NSLog(@"【chenms】news:%@  %s", news.title, __func__);
+}
+
+#pragma mark - CellProtocol
+- (void)didSelectCompositeSubNews:(News *)news {
+    NSLog(@"【chenms】news:%@  %s", news.title, __func__);
 }
 
 #pragma mark - Getter

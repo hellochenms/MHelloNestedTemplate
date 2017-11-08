@@ -116,6 +116,14 @@
     [self.subNodes enumerateObjectsUsingBlock:^(Node * _Nonnull node, NSUInteger idx, BOOL * _Nonnull stop) {
         [node setHighlighted:NO animated:NO];
     }];
+    
+    if (self.didSelectedBlock) {
+        CGPoint point = [[touches anyObject] locationInView:self];
+        Node *node = (Node *)[self hitTest:point withEvent:event];
+        if ([self.subNodes containsObject:node]) {
+            self.didSelectedBlock(node.news);
+        }
+    }
 }
 
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

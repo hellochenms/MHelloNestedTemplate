@@ -17,4 +17,5 @@
 - (void)primitiveAddFooter;
 - (void)primitiveLayoutFooterForNews:(News *)news;
 - (void)primitiveConfigFooterWithNews:(News *)news;
+@property (nonatomic, copy) void (^didSelectedBlock)(News * news);
 @end

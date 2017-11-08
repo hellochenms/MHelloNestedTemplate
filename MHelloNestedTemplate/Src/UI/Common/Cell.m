@@ -15,6 +15,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.node = [[self primitiveNodeClass] new];
+        [self primitiveDecorateNode];
         [self.contentView addSubview:self.node];
     }
     
@@ -24,6 +25,10 @@
 
 - (Class)primitiveNodeClass {
     return [Node class];
+}
+
+- (void)primitiveDecorateNode {
+    
 }
 
 - (void)layoutSubviews {

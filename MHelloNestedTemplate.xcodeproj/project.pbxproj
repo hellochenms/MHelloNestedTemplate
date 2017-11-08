@@ -38,6 +38,7 @@
 		99997A671FB06452003C8BBA /* News+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 99997A661FB06452003C8BBA /* News+Layout.m */; };
 		99DB97F71FB1A078001C4C8F /* CompositeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DB97F31FB1A078001C4C8F /* CompositeLayout.m */; };
 		99DB97F81FB1A078001C4C8F /* CompositeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DB97F41FB1A078001C4C8F /* CompositeNode.m */; };
+		99DB98341FB2E690001C4C8F /* NodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DB98331FB2E690001C4C8F /* NodeHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,8 @@
 		99DB97F41FB1A078001C4C8F /* CompositeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompositeNode.m; sourceTree = "<group>"; };
 		99DB97F51FB1A078001C4C8F /* CompositeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompositeLayout.h; sourceTree = "<group>"; };
 		99DB97F61FB1A078001C4C8F /* CompositeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompositeNode.h; sourceTree = "<group>"; };
+		99DB98321FB2E690001C4C8F /* NodeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NodeHelper.h; sourceTree = "<group>"; };
+		99DB98331FB2E690001C4C8F /* NodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NodeHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +268,8 @@
 				99DB97F31FB1A078001C4C8F /* CompositeLayout.m */,
 				99997A4F1FB03DC7003C8BBA /* LayoutMapping.h */,
 				99997A501FB03DC7003C8BBA /* LayoutMapping.m */,
+				99DB98321FB2E690001C4C8F /* NodeHelper.h */,
+				99DB98331FB2E690001C4C8F /* NodeHelper.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -484,6 +489,7 @@
 				99DB97F81FB1A078001C4C8F /* CompositeNode.m in Sources */,
 				996B9F091FB1671900B3ECCE /* HeaderFooterCompositeLayout.m in Sources */,
 				99892B6D1FB00A6E0075E93A /* AppDelegate.m in Sources */,
+				99DB98341FB2E690001C4C8F /* NodeHelper.m in Sources */,
 				99892BD01FB00D2E0075E93A /* TempDataGenerator.m in Sources */,
 				99997A4E1FB03731003C8BBA /* News.m in Sources */,
 				99997A561FB04B7D003C8BBA /* TitleNode.m in Sources */,

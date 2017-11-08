@@ -11,10 +11,19 @@
 #import "Layout.h"
 #import "Node.h"
 
+@protocol CellProtocol;
+
 @interface Cell : UITableViewCell
 @property (nonatomic) __kindof Node *node;
+@property (nonatomic, weak) id<CellProtocol> delegate;
 + (double)heightForNews:(News *)news;
 - (void)configWithNews:(News *)news;
 
 - (Class)primitiveNodeClass;
+- (void)primitiveDecorateNode;
+@end
+
+@protocol CellProtocol<NSObject>
+@optional
+- (void)didSelectCompositeSubNews:(News *)news;
 @end
