@@ -7,9 +7,13 @@
 //
 
 #import "News.h"
-#import "Layout.h"
+#import "NodeLayout.h"
 
 @interface News (Layout)
-@property (nonatomic) __kindof Layout *layout;
+@property (nonatomic) __kindof NodeLayout *layout;
+@property (nonatomic) __kindof Layout *headerLayout;
+@property (nonatomic) __kindof Layout *footerLayout;
 - (void)mh_cleanLayout;
+- (void)mh_cleanBodyLayout;
+- (void)mh_cleanLayoutRecursive;
 @end

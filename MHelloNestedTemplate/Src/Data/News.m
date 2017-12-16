@@ -12,6 +12,8 @@
 - (NLayoutType)layoutType {
     if (self.subNewses && [self.subNewses count] > 0) {
         return NLayoutTypeComposite;
+    } else if (self.images && [self.images count] > 0) {
+        return NLayoutTypeFriends;
     } else if(self.imageURLString && [self.imageURLString length] > 0) {
         return NLayoutTypeTitleImage;
     } else {

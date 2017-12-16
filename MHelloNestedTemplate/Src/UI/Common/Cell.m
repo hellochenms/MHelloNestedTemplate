@@ -7,28 +7,24 @@
 //
 
 #import "Cell.h"
-#import "LayoutMapping.h"
+
+@interface Cell()
+@property (nonatomic) __kindof Node *node;
+@end
 
 @implementation Cell
 #pragma mark - Life Cycle
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.node = [[self primitiveNodeClass] new];
-        [self primitiveDecorateNode];
         [self.contentView addSubview:self.node];
     }
     
     return self;
 }
 
-
-- (Class)primitiveNodeClass {
++ (Class)primitiveNodeClass {
     return [Node class];
-}
-
-- (void)primitiveDecorateNode {
-    
 }
 
 - (void)layoutSubviews {
@@ -44,13 +40,24 @@
 
 #pragma mark - Public
 + (double)heightForNews:(News *)news {
-    double height = [Node heightForNews:news];
+    double height = [[self primitiveNodeClass] heightForNews:news];
     
     return height;
 }
 
-- (void)configWithNews:(News *)news {
-    [self.node configWithNews:news];
++ (double)heightForNews:(News *)news decorateLayoutBlock:(void(^)(NodeLayout *))decorateLayoutBlock {
+    double height = [[self primitiveNodeClass] heightForNews:news decorateLayoutBlock:decorateLayoutBlock];
+    
+    return height;
+}
+
+#pragma mark - Setter/Getter
+- (__kindof Node *)node {
+    if(!_node){
+        _node = [[[self class] primitiveNodeClass] new];
+    }
+
+    return _node;
 }
 
 @end

@@ -7,15 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Something.h"
 #import "News+Layout.h"
-#import "Layout.h"
+#import "NodeLayout.h"
+#import "Header.h"
+#import "Footer.h"
 
-@interface Node : UIView
-@property (nonatomic) News *news;
+@interface Node : Something
+@property (nonatomic) NodeLayout *layout;
+@property (nonatomic) Header *header;
+@property (nonatomic, readonly) UIView *bodyContainer;
+@property (nonatomic) Footer *footer;
+@property (nonatomic) NSIndexPath *indexPath;
 + (double)heightForNews:(News *)news;
-- (void)configWithNews:(News *)news;
++ (double)heightForNews:(News *)news decorateLayoutBlock:(void(^)(NodeLayout *))decorateLayoutBlock;
+- (void)primitiveAddBodyContainerSubViews:(UIView *)bodyContainer;
+- (void)primitiveWillConfigWithNews:(News *)news;
+- (void)primitiveConfigBodyContainerForNews:(News *)news;
 - (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated;
 
-+ (__kindof Layout *)primitiveGenerateLayout;
++ (__kindof NodeLayout *)primitiveGenerateLayout;
 - (void)primitiveConfigWithNews:(News *)news;
 @end

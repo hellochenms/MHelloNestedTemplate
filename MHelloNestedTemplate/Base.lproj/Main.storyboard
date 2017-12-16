@@ -25,6 +25,14 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="6Xi-nr-CqE"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HND-gO-8FV">
+                                <rect key="frame" x="0.0" y="311" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="scroll-to-somewhere"/>
+                                <connections>
+                                    <action selector="onTapScrollToSomewhere:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p8e-wG-qjh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -36,6 +44,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="scrollButton" destination="HND-gO-8FV" id="UIW-85-RA2"/>
+                        <outlet property="scrollToSomewhereButton" destination="HND-gO-8FV" id="8E5-Di-zEG"/>
                         <outlet property="tableView" destination="JtI-yb-BXk" id="58t-ff-1o1"/>
                     </connections>
                 </viewController>

@@ -11,5 +11,6 @@
 
 @interface Layout : NSObject
 @property (nonatomic) double height;
+@property (nonatomic) CGRect constraintFrame;
 - (void)calcForNews:(News *)news;
 @end

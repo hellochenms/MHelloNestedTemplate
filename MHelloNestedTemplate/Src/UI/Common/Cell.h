@@ -8,22 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "News.h"
-#import "Layout.h"
 #import "Node.h"
-
-@protocol CellProtocol;
+#import "NodeLayout.h"
 
 @interface Cell : UITableViewCell
-@property (nonatomic) __kindof Node *node;
-@property (nonatomic, weak) id<CellProtocol> delegate;
+@property (nonatomic, readonly) __kindof Node *node;
 + (double)heightForNews:(News *)news;
-- (void)configWithNews:(News *)news;
-
-- (Class)primitiveNodeClass;
-- (void)primitiveDecorateNode;
++ (double)heightForNews:(News *)news decorateLayoutBlock:(void(^)(NodeLayout *))decorateLayoutBlock;
++ (Class)primitiveNodeClass;
 @end
 
-@protocol CellProtocol<NSObject>
-@optional
-- (void)didSelectCompositeSubNews:(News *)news;
-@end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface V1ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *scrollButton;
 
 @end

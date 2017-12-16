@@ -7,33 +7,52 @@
 //
 
 #import "TempDataGenerator.h"
+#import "Image.h"
 
 @implementation TempDataGenerator
 + (NSArray<News *> *)newses {
     NSMutableArray<News *> *newses = [NSMutableArray<News *> array];
     for (NSInteger i = 0; i < 40; i++) {
         News *news = [News new];
-        news.title = [NSString stringWithFormat:@"%ld:%@", i, [self randomLengthTitle]];
+        news.nid = i;
+        news.title = [NSString stringWithFormat:@"%ld:%@", news.nid, [self randomLengthTitle]];
+        
         if (i % 2 == 0) {
             news.imageURLString = @"https://www.baidu.com/img/bd_logo1.png";
         }
+        
         if (i % 5 == 0) {
-            news.title = [NSString stringWithFormat:@"GroupTitlte:%ld", i];
-            
-            NSMutableArray<News *> *subNewses = [NSMutableArray<News *> array];
-            
-            News *subNews = [News new];
-            subNews.title = [NSString stringWithFormat:@"sub1-%ld:%@", i, [self randomLengthTitle]];
-            subNews.imageURLString = @"https://www.baidu.com/img/bd_logo1.png";
-            [subNewses addObject:subNews];
-            
-            subNews = [News new];
-            subNews.title = [NSString stringWithFormat:@"sub2-%ld:%@", i, [self randomLengthTitle]];
-            [subNewses addObject:subNews];
-            
-            news.subNewses = subNewses;
+            NSInteger imageCount = arc4random() % 11;
+            NSMutableArray<Image *> *images = [NSMutableArray array];
+            for (NSInteger i = 0; i < imageCount; i++) {
+                Image *image = [Image new];
+                image.imageURLString = @"https://www.baidu.com/img/bd_logo1.png";
+                image.width = ((NSInteger)arc4random() % 500) - 100;
+                image.height = ((NSInteger)arc4random() % 500) - 100;
+                [images addObject:image];
+            }
+            news.images = images;
         }
         
+        if (i % 10 == 0) {
+            news.title = [NSString stringWithFormat:@"GroupTitlte:%ld", i];
+
+            NSMutableArray<News *> *subNewses = [NSMutableArray<News *> array];
+
+            News *subNews = [News new];
+            subNews.nid = i * 100;
+            subNews.title = [NSString stringWithFormat:@"sub1-%ld:%@", subNews.nid, [self randomLengthTitle]];
+            subNews.imageURLString = @"https://www.baidu.com/img/bd_logo1.png";
+            [subNewses addObject:subNews];
+
+            subNews = [News new];
+            subNews.nid = i * 100 + 1;
+            subNews.title = [NSString stringWithFormat:@"sub2-%ld:%@", subNews.nid, [self randomLengthTitle]];
+            [subNewses addObject:subNews];
+
+            news.subNewses = subNewses;
+        }
+
         [newses addObject:news];
     }
     
